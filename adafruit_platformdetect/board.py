@@ -70,6 +70,7 @@ class Board:
 
         chip_id = self.detector.chip.id
         board_id = None
+        print("Chip ID", chip_id)
 
         if chip_id == chips.BCM2XXX:
             board_id = self._pi_id()
