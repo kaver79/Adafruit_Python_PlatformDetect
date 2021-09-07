@@ -274,6 +274,7 @@ class Chip:
                 linux_id = chips.S905
             if compatible and "s905xamlogic" in compatible:
                 linux_id = chips.S905X
+                print("compatible s905xamlogic linux_id: ", linux_id)
             if compatible and "amlogic" in compatible:
                 compatible_list = (
                     compatible.replace("\x00", ",").replace(" ", "").split(",")
