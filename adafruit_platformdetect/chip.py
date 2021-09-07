@@ -272,7 +272,15 @@ class Chip:
             if compatible and "odroid-c2" in compatible:
                 linux_id = chips.S905
             if compatible and "libretech" in compatible:
-                linux_id = chips.S905X
+                compatible_list = (
+                    compatible.replace("\x00", ",").replace(" ", "").split(",")
+                )
+                print("Detecting a libretech: ", compatible_list)
+                if "S905X" in compatible_list:
+                    linux_id = chips.S905X
+                    print("compatible s905xamlogic linux_id: ", linux_id)
+                else
+                    linux_id = chips.S905X
             if compatible and "amlogic" in compatible:
                 compatible_list = (
                     compatible.replace("\x00", ",").replace(" ", "").split(",")
