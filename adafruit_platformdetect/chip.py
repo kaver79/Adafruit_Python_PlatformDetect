@@ -234,7 +234,6 @@ class Chip:
 
         linux_id = None
         hardware = self.detector.get_cpuinfo_field("Hardware")
-        print("Hardware id: ", hardware)
 
         if hardware is None:
             vendor_id = self.detector.get_cpuinfo_field("vendor_id")
