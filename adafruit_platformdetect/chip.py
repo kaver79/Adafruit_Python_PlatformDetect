@@ -259,9 +259,9 @@ class Chip:
             ##            print("linux_id = ", linux_id)
 
             compatible = self.detector.get_device_compatible()
-            print("compatible id: ", compatible)
             for i in compatible:
                 print("Compatible items: ", i)
+            print("item_comp", ("s905xamlogic" in compatible))
             if compatible and "tegra" in compatible:
                 compats = compatible.split("\x00")
                 if "nvidia,tegra210" in compats:
