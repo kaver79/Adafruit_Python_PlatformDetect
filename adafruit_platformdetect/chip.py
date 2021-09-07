@@ -258,6 +258,7 @@ class Chip:
             ##            print("linux_id = ", linux_id)
 
             compatible = self.detector.get_device_compatible().split(',')
+            print("Detecting a compatible: ", compatible)
             if compatible and "tegra" in compatible:
                 compats = compatible.split("\x00")
                 if "nvidia,tegra210" in compats:
@@ -271,7 +272,6 @@ class Chip:
             if compatible and "odroid-c2" in compatible:
                 linux_id = chips.S905
             if compatible and "libretech" in compatible:
-
                 compatible_list = (
                     compatible.replace("\x00", ",").replace(" ", "").split(",")
                 )
