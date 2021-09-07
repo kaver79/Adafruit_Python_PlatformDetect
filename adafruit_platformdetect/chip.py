@@ -279,7 +279,7 @@ class Chip:
                 if "S905X" in compatible_list:
                     linux_id = chips.S905X
                     print("compatible s905xamlogic linux_id: ", linux_id)
-                else
+                else:
                     linux_id = chips.S905X
             if compatible and "amlogic" in compatible:
                 compatible_list = (
