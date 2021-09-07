@@ -97,6 +97,8 @@ class Board:
             board_id = boards.ODROID_C1
         elif chip_id == chips.S905:
             board_id = boards.ODROID_C2
+        elif chip_id == chips.S905X:
+            board_id = boards.LE_POTATO
         elif chip_id == chips.S905X3:
             board_id = boards.ODROID_C4
         elif chip_id == chips.S922X:
