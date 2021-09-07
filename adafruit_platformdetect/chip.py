@@ -234,6 +234,7 @@ class Chip:
 
         linux_id = None
         hardware = self.detector.get_cpuinfo_field("Hardware")
+        print("Hardware id: ", hardware)
 
         if hardware is None:
             vendor_id = self.detector.get_cpuinfo_field("vendor_id")
@@ -258,6 +259,7 @@ class Chip:
             ##            print("linux_id = ", linux_id)
 
             compatible = self.detector.get_device_compatible()
+            print("compatible id: ", compatible)
             if compatible and "tegra" in compatible:
                 compats = compatible.split("\x00")
                 if "nvidia,tegra210" in compats:
