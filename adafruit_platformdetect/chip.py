@@ -272,6 +272,8 @@ class Chip:
                 linux_id = chips.IMX8MX
             if compatible and "odroid-c2" in compatible:
                 linux_id = chips.S905
+            if compatible and "s905xamlogic" in compatible:
+                linux_id = chips.S905X
             if compatible and "amlogic" in compatible:
                 compatible_list = (
                     compatible.replace("\x00", ",").replace(" ", "").split(",")
