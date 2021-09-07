@@ -150,6 +150,7 @@ class Chip:
                 return self._chip_id
 
         platform = sys.platform
+        print("Platform detection: ", platform)
         if platform in ("linux", "linux2"):
             self._chip_id = self._linux_id()
             return self._chip_id
